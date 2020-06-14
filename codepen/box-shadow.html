@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <style>
+        body {
+  width: 75%;
+  margin: 2em auto;
+  font-family: 'Baloo 2', cursive;
+  background: #f1f1f1;
+}
+div {
+  background: white;
+  width: 200px;
+  height: 200px;
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.learning-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.one {
+  box-shadow: 5px 5px;
+}
+.two {
+  box-shadow: 5px -5px red;
+}
+.three {
+  box-shadow: 5px 5px 20px red;
+}
+.four {
+  box-shadow: 0 0 5px 5px #ff000066;
+}
+.five {
+  box-shadow: inset 0px 0px 13px 4px pink;
+}
+.six {
+  color: red;
+  box-shadow: 0px 0px 3px 2px;
+}
+.seven {
+  color: red;
+  box-shadow: 0px 0px 3px 2px blue;
+}
+.eight {
+   box-shadow: 5px -7px 2px 2px blue, -5px 5px 5px 5px pink;
+}
+
+
+.effect-1 {
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.effect-2 {
+  box-shadow: 0 4px 6px #77777736, 0 4px 6px #77777761;
+}
+
+.effect-3 {
+  box-shadow: 10px 14px 18px #77777736, 6px 16px 10px #77777761;
+}
+
+    </style>
+  </head>
+  
+  <body>
+    <section class='learning-wrapper'>
+      <div class='one'>One</div>
+      <div class='two'>Two</div>
+      <div class='three'>Three</div>
+      <div class='four'>Four</div>
+      <div class='five'>Five</div>
+      <div class='six'>Six</div>
+      <div class='seven'>Seven</div>
+      <div class='eight'>Eight</div>
+    </section>
+    <hr />
+    <section class='learning-wrapper'>
+      <div class='effect-1'>E-1</div>
+      <div class='effect-2'>E-2</div>
+      <div class='effect-3'>E-3</div>
+    </section>
+  </body>
+</html>
