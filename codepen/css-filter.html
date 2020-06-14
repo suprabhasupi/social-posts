@@ -1,0 +1,205 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+      <h1>CSS Filter</h1>
+    <div class="original-image">
+      <img
+        src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+        alt="first-img"
+      />
+      <p>Original Image</p>
+    </div>
+    <div class="wrapper">
+      <div>
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="first-img"
+          class="drop-shadow"
+        />
+        <p>Drop Shadow</p>
+      </div>
+      <div>
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="first-img"
+          class="contrast"
+        />
+        <p>Contrast</p>
+      </div>
+      <div>
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="first-img"
+          class="brightness"
+        />
+        <p>Brightness</p>
+      </div>
+      <div>
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="first-img"
+          class="blur"
+        />
+        <p>Blur</p>
+      </div>
+      <div>
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="first-img"
+          class="invert"
+        />
+        <p>Invert</p>
+      </div>
+      <div>
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="first-img"
+          class="opacity"
+        />
+        <p>Opacity</p>
+      </div>
+      <div>
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="first-img"
+          class="saturate"
+        />
+        <p>Saturate</p>
+      </div>
+      <div>
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="first-img"
+          class="sepia"
+        />
+        <p>Sepia</p>
+      </div>
+      <div>
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="first-img"
+          class="grayscale"
+        />
+        <p>Grayscale</p>
+      </div>
+      <div>
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="first-img"
+          class="hue"
+        />
+        <p>Hue-rotate</p>
+      </div>
+      <div>
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="first-img"
+          class="multiple"
+        />
+        <p>Multiple Property</p>
+      </div>
+    </div>
+  </body>
+
+  <style>
+    body {
+        margin-top: 2em;
+      font-size: 18px;
+      line-height: 0;
+      font-family: "Baloo 2", cursive;
+      user-select: none;
+      background: #46e3f3;
+    }
+    h1 {
+        text-align: center;
+        margin: 1em 0;
+    }
+    .wrapper {
+      width: 75%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .wrapper > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0px 0px 5px rgba(0, 81, 111, 0.68);
+      margin: 8px 22px;
+      border-radius: 20px;
+      background-color: white;
+    }
+
+    img {
+      width: 175px;
+      margin: 10px;
+    }
+
+    .original-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 20vw;
+      margin: auto;
+      box-shadow: inset 4px 4px 5px rgba(0, 81, 111, 0.48), inset -4px -4px 5px rgba(0, 81, 111, 0.48);
+      border-radius: 20px;
+      background-color: white;
+      margin-bottom: 2em;
+    }
+
+    .drop-shadow {
+      filter: drop-shadow(12px 12px 5px #1c8c9e);
+    }
+
+    .contrast {
+      filter: contrast(0);
+      /*   filter: contrast(125%); */
+    }
+
+    .brightness {
+      filter: brightness(0);
+    }
+
+    .blur {
+      filter: blur(4px);
+    }
+
+    .invert {
+      filter: invert(100%);
+    }
+
+    .opacity {
+      filter: opacity(30%);
+    }
+
+    .saturate {
+      filter: saturate(200%);
+    }
+
+    .sepia {
+      filter: sepia(70%);
+    }
+
+    .grayscale {
+      filter: grayscale(100%);
+    }
+
+    .hue {
+      filter: hue-rotate(-90deg);
+    }
+
+    .multiple {
+      filter: hue-rotate(-30deg) sepia(75%) contrast(150%) saturate(300%)
+        hue-rotate(30deg);
+    }
+  </style>
+</html>
