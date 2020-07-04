@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
+    <title>Mix Blend Mode</title>
+  </head>
+  <style>
+    section {
+      font-family: 'Baloo 2', cursive;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .box {
+      background: red;
+      width: 25%;
+      margin: 1rem;
+      position: relative;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    p {
+      position: absolute;
+      color: white;
+      z-index: 1;
+      right: 10px;
+      font-size: 20px;
+      top: -8px;
+    }
+    .normal {
+      mix-blend-mode: normal;
+    }
+    .multiply {
+      mix-blend-mode: multiply;
+    }
+    .screen {
+      mix-blend-mode: screen;
+    }
+    .difference {
+      mix-blend-mode: difference;
+    }
+    .exclusion {
+      mix-blend-mode: exclusion;
+    }
+    .overlay {
+      mix-blend-mode: overlay;
+    }
+    .darken {
+      mix-blend-mode: darken;
+    }
+    .lighten {
+      mix-blend-mode: lighten;
+    }
+    .color-dodge {
+      mix-blend-mode: color-dodge;
+    }
+    .color-burn {
+      mix-blend-mode: color-burn;
+    }
+    .hard-light {
+      mix-blend-mode: hard-light;
+    }
+    .soft-light {
+      mix-blend-mode: soft-light;
+    }
+    .hue {
+      mix-blend-mode: hue;
+    }
+    .luminosity {
+      mix-blend-mode: luminosity;
+    }
+    .box1 {
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div class="box box1">
+      <img
+        src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+        class="normal"
+      />
+    </div>
+    <section>
+      <div class="box">
+        <p>multiply</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="multiply"
+        />
+      </div>
+      <div class="box">
+        <p>screen</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="screen"
+        />
+      </div>
+      <div class="box">
+        <p>difference</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="difference"
+        />
+      </div>
+      <div class="box">
+        <p>exclusion</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="exclusion"
+        />
+      </div>
+      <div class="box">
+        <p>overlay</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="overlay"
+        />
+      </div>
+      <div class="box">
+        <p>darken</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="darken"
+        />
+      </div>
+      <div class="box">
+        <p>lighten</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="lighten"
+        />
+      </div>
+
+      <div class="box">
+        <p>color-dodge</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="color-dodge"
+        />
+      </div>
+
+      <div class="box">
+        <p>color-burn</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="color-burn"
+        />
+      </div>
+
+      <div class="box">
+        <p>hard-light</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="hard-light"
+        />
+      </div>
+
+      <div class="box">
+        <p>soft-light</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="soft-light"
+        />
+      </div>
+
+      <div class="box">
+        <p>hue</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="hue"
+        />
+      </div>
+
+      <div class="box">
+        <p>luminosity</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/05/17/21/bulb-2287759__340.jpg"
+          class="luminosity"
+        />
+      </div>
+    </section>
+  </body>
+</html>
