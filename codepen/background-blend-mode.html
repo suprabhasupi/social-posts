@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Blen Mode</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        width: 50rem;
+        height: 28rem;
+        background-image: url(https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/09/1488375386-1488370326-friends-cast.jpg?resize=480:*);
+        background-size: cover;
+        background-blend-mode: multiply;
+        animation: color 5s ease-in-out infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(1turn);
+        }
+      }
+
+      @keyframes color {
+        12% {
+          background-color: #ea529f;
+        }
+        24% {
+          background-color: #28d128;
+        }
+        36% {
+          background-color: violet;
+        }
+        48% {
+          background-color: orange;
+        }
+        60% {
+          background-color: #ad5bea;
+        }
+        72% {
+          background-color: yellow;
+        }
+        84% {
+          background-color: #6262ea;
+        }
+        90% {
+          background-color: #e63d3d;
+        }
+        100% {
+          background-color: transparent;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
