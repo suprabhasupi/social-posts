@@ -1,0 +1,96 @@
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Baloo 2", cursive;
+      box-sizing: border-box;
+    }
+    header {
+      box-sizing: border-box;
+      position: fixed;
+      background-color: white;
+      padding: 0px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 5px #bbb;
+      width: 100%;
+      flex-direction: row-reverse;
+    }
+    .container {
+      padding-top: 6rem;
+    }
+    img {
+      width: 300px;
+    }
+    img:last-child {
+      border-bottom: none;
+    }
+    #menu-icon {
+      font-size: 50px;
+      cursor: pointer;
+    }
+    nav {
+      display: none;
+      position: fixed;
+      top: 56px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      font-size: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    ul {
+      background-color: #73d796;
+      margin: 0;
+      padding-left: 20px;
+      list-style: none;
+    }
+    li {
+      padding: 20px 0;
+    }
+  </style>
+  <body>
+    <header>
+      <div id="title">Logo</div>
+      <div id="menu-icon">≡</div>
+    </header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Settings</li>
+        <li>Profile</li>
+        <li>Pictures</li>
+      </ul>
+    </nav>
+    <div class="container">
+      <img src="https://techstickerhub.com/images/demo/shop/GitHub.jpg" />
+      <img src="https://techstickerhub.com/images/demo/shop/GitHub.jpg" />
+      <img src="https://techstickerhub.com/images/demo/shop/GitHub.jpg" />
+      <img src="https://techstickerhub.com/images/demo/shop/GitHub.jpg" />
+      <img src="https://techstickerhub.com/images/demo/shop/GitHub.jpg" />
+    </div>
+  </body>
+  <script>
+    $("#menu-icon").on("click", () => {
+      $("nav").toggle();
+    });
+    // when user taps to nav it should close
+    $("nav")
+      .on("click", () => {
+        $("nav").toggle();
+      })
+      .children()
+      .on("click", () => {
+        // it will close the nav on tap of nav list
+        return true;
+      });
+  </script>
+</html>
