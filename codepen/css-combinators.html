@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+    rel="stylesheet"
+  />
+    <title>CSS Combinator</title>
+    <style>
+        html, body {
+            font-family: "Baloo 2", cursive;
+            height: 100%;
+            /* background-color: #fdc7d5; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        p {
+            padding: 0 5px;
+        }
+        div > p {
+            background-color: #fdc7d5;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>First Paragraph</p>
+        <p>Second Paragraph</p>
+        <span>Third Span</span>
+        <p>Fourth Paragraph</p>
+        <ul>
+            <li>First Item</li>
+            <li>Second Item</li>
+        </ul>
+    </div>
+    <p>Fifth Paragraph</p>
+    <p>Sixth Paragraph</p>
+</body>
+</html>
