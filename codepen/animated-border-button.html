@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>Animated Border Button</title>
+    <style>
+      html,
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background-color: #00C2CB;
+        font-family: "Baloo 2", cursive;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        font-size: 1.5rem;
+        z-index: 1;
+        color: white;
+      }
+
+      svg {
+        position: absolute;
+        cursor: pointer;
+        background: red;
+      }
+
+      rect {
+        stroke: yellow;
+        stroke-width: 1em;
+        fill-opacity: 0;
+        stroke-dashoffset: 50em;
+        stroke-dasharray: 50em;
+        transition: 1s;
+      }
+      
+      svg:hover rect {
+        animation: animate 1s ease-in-out;
+        transition: 1s;
+        stroke-dashoffset: 0em;
+      }
+    </style>
+  </head>
+  <body>
+    <button> Hover Over Me 🕵️‍♀️</button>
+    <svg width="17em" height="6.5em">
+      <rect width="17em" height="6.5em"></rect>
+    </svg>
+  </body>
+</html>
