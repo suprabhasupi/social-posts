@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glowing Border</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+      }
+      .wrapper {
+        position: relative;
+        height: 350px;
+        width: 320px;
+        display: block;
+        background: linear-gradient(black, #555);
+      }
+      .glow::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        background: linear-gradient(
+          25deg,
+          #e8f74d,
+          #ff6600d9,
+          #00ff66,
+          #13ff13,
+          #ad27ad,
+          #6512b0,
+          #ff3300df,
+          #5aabd2
+        );
+        background-size: 400%;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        z-index: -1;
+        animation: glowAnimate 20s linear infinite;
+      }
+
+      @keyframes glowAnimate {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 600% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper glow"></div>
+  </body>
+</html>
