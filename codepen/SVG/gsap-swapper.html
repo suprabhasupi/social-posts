@@ -1,0 +1,67 @@
+<html>
+  <style>
+    html {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .wrapper {
+      display: flex;
+      width: 310px;
+      height: 290px;
+      flex-wrap: wrap;
+      background: black;
+    }
+
+    .box {
+      margin: 1rem;
+      border-radius: 0;
+      background: skyblue;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  </style>
+  <div class="wrapper">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+  <script>
+    gsap.to(".box", 1, {
+      scale: 0.1,
+      y: 30,
+      yoyo: true, // If true, playback will alternate forwards and backwards on each repeat.
+      repeat: -1, // The number of times the animation will repeat.
+      ease: "power3.inOut",
+      delay: 1, // The time (in seconds) before the timeline should start.
+      stagger: {
+        amount: 1,
+        grid: "auto",
+        from: "left",
+      },
+    })
+  </script>
+</html>

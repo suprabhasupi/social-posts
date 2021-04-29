@@ -1,0 +1,70 @@
+<html>
+  <style>
+    body {
+      margin: 10px;
+    }
+
+    .box {
+      display: block;
+      border: 1px solid #ccc;
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+
+    .from {
+      background: orange;
+    }
+  </style>
+  <div class="box to"></div>
+  <div class="box from"></div>
+  <div class="box three-d"></div>
+  <div class="fromTo"></div>
+  <div class="box ease"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+  <script>
+    // CSSPlugin.defaultTransformPerspective = 400;
+
+    gsap.to(".to", {
+      duration: 2,
+      rotation: 180,
+      scale: 0.5,
+      opacity: 0.5,
+      x: 150,
+    })
+    gsap.from(".from", { duration: 2, opacity: 0, x: 300 })
+    gsap.to(".from", { duration: 2, x: 150 })
+
+    // gsap.to(".three-d", {duration: 3, x: 100, y: 100, scale: 1.5, skewX: 45, rotation: 90});
+
+    gsap.to(".three-d", { duration: 3, x: 50, y: 50, scale: 1.2, rotation: 45 })
+
+    // Usinh set
+    gsap.set(".fromTo", { backgroundColor: "skyblue", x: 10 })
+
+    // Using fromTo
+    gsap.fromTo(
+      ".fromTo",
+      { width: 0, height: 0 },
+      { duration: 1.5, width: 100, height: 200 }
+    )
+
+    // ease
+    gsap.to(".ease", { duration: 4, x: 400, ease: "bounce" })
+
+    // callback
+    gsap.to(".ease", {
+      duration: 4,
+      x: 400,
+      ease: "bounce",
+      onComplete: handleComplete,
+      onCompleteParams: ["Completed!"],
+    })
+
+    function handleComplete(msg) {
+      console.log("handleComplete", msg)
+    }
+  </script>
+</html>
