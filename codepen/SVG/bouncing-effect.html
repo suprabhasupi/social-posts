@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bouncing Effect</title>
+    <style>
+      html {
+        width: 100vw;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .lane {
+        border: 2px solid black;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <html>
+      <svg height="500" width="600">
+        <linearGradient id="gradient1" x1="0.5" y1="1" x2="0.5" y2="0">
+          <stop offset="0%" stop-color="#9B004A"></stop>
+          <stop offset="100%" stop-color="yellow"></stop>
+        </linearGradient>
+
+        <radialGradient id="gradient2" x1="0.5" y1="1" x2="0.5" y2="0">
+          <stop offset="10%" stop-color="gold" />
+          <stop offset="95%" stop-color="red" />
+        </radialGradient>
+
+        <linearGradient id="gradient3" x1="1" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#afa5ff"></stop>
+          <stop offset="100%" stop-color="#9B004A"></stop>
+        </linearGradient>
+
+        <linearGradient id="gradient5" x1="1" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#3dff00"></stop>
+          <stop offset="100%" stop-color="#fffda4"></stop>
+        </linearGradient>
+
+        <linearGradient id="gradient6" x1="1" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#ff6b12"></stop>
+          <stop offset="100%" stop-color="#ffc7a5"></stop>
+        </linearGradient>
+
+        <circle
+          class="circle circle1"
+          cx="50"
+          cy="50"
+          r="40"
+          stroke="black"
+          stroke-width="3"
+          fill="url(#gradient1)"
+        />
+
+        <circle
+          class="circle circle2"
+          cx="100"
+          cy="62"
+          r="30"
+          stroke="black"
+          stroke-width="3"
+          fill="url(#gradient2)"
+        />
+
+        <circle
+          class="circle circle2"
+          cx="200"
+          cy="50"
+          r="40"
+          stroke="black"
+          stroke-width="3"
+          fill="url(#gradient3)"
+        />
+
+        <circle
+          class="circle circle3"
+          cx="300"
+          cy="50"
+          r="40"
+          stroke="black"
+          stroke-width="3"
+          fill="url(#gradient5)"
+        />
+
+        <circle
+          class="circle circle2"
+          cx="400"
+          cy="50"
+          r="40"
+          stroke="black"
+          stroke-width="3"
+          fill="url(#gradient6)"
+        />
+      </svg>
+
+      <div class="lane"></div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    </html>
+    <script>
+      var tl = gsap.timeline({ repeat: -1 })
+
+      gsap.set(".lane", { y: -113 })
+      tl.set(".circle", { y: 300, x: 100 })
+      tl.to(".circle", {
+        duration: 0.1,
+        transformOrigin: "50% 100%",
+        scaleY: 0.45,
+        yoyo: true,
+        repeat: 1,
+      }).to(".circle", {
+        duration: 0.8,
+        y: 50,
+        ease: Power0.easeNone,
+        yoyo: true,
+        repeat: 1,
+      })
+    </script>
+  </body>
+</html>
