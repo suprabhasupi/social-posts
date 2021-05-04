@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ribbon For Cards</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      div {
+        width: 25%;
+        padding: 10px 25px;
+        margin: auto;
+        background: #728aff;
+        border-radius: 10px;
+        position: relative;
+        color: white;
+        box-shadow: 0 4px 6px #77777736, 0 4px 6px #77777761;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      div::before {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        top: 27px;
+        right: -8.4px;
+        content: "";
+        transform: rotate(48deg);
+        z-index: -1;
+        box-shadow: 0 4px 6px #77777736, 0 4px 6px #77777761;
+      }
+
+      div::after {
+        position: absolute;
+        content: "New Post";
+        background-color: red;
+        right: -12px;
+        top: 10px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        padding: 5px 15px;
+        box-shadow: 0 4px 6px #77777736, 0 4px 6px #77777761;
+      }
+
+      p {
+        letter-spacing: 0.6px;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>CSS</h1>
+
+      <p>
+        Cascading Style Sheets is a style sheet language used for describing the
+        presentation of a document written in a markup language such as HTML
+      </p>
+    </div>
+  </body>
+</html>
