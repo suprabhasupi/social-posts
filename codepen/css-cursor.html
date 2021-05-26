@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursor of CSS</title>
+    <style>
+      body {
+        width: 75%;
+        margin: auto;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+      }
+      .auto {
+        cursor: auto;
+      }
+      .default {
+        cursor: default;
+      }
+      .none {
+        cursor: none;
+      }
+      .context-menu {
+        cursor: context-menu;
+      }
+      .grab {
+        cursor: grab;
+      }
+      .grabbing {
+        cursor: grabbing;
+      }
+      .help {
+        cursor: help;
+      }
+      .pointer {
+        cursor: pointer;
+      }
+      .progress {
+        cursor: progress;
+      }
+      .wait {
+        cursor: wait;
+      }
+      .cell {
+        cursor: cell;
+      }
+      .crosshair {
+        cursor: crosshair;
+      }
+      .text {
+        cursor: text;
+      }
+      .vertical-text {
+        cursor: vertical-text;
+      }
+      .alias {
+        cursor: alias;
+      }
+      .copy {
+        cursor: copy;
+      }
+      .move {
+        cursor: move;
+      }
+      .no-drop {
+        cursor: no-drop;
+      }
+      .not-allowed {
+        cursor: not-allowed;
+      }
+      .all-scroll {
+        cursor: all-scroll;
+      }
+      .col-resize {
+        cursor: col-resize;
+      }
+      .row-resize {
+        cursor: row-resize;
+      }
+      .n-resize {
+        cursor: n-resize;
+      }
+      .e-resize {
+        cursor: e-resize;
+      }
+      .s-resize {
+        cursor: s-resize;
+      }
+      .w-resize {
+        cursor: w-resize;
+      }
+      .ns-resize {
+        cursor: ns-resize;
+      }
+      .ew-resize {
+        cursor: ew-resize;
+      }
+      .ne-resize {
+        cursor: ne-resize;
+      }
+      .nw-resize {
+        cursor: nw-resize;
+      }
+      .se-resize {
+        cursor: se-resize;
+      }
+      .sw-resize {
+        cursor: sw-resize;
+      }
+      .nesw-resize {
+        cursor: nesw-resize;
+      }
+      .nwse-resize {
+        cursor: nwse-resize;
+      }
+      .zoom-in {
+        cursor: zoom-in;
+      }
+      .zoom-out {
+        cursor: zoom-out;
+      }
+      .cursors {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .heart {
+        cursor: url("https://i.imgur.com/K10EMnr.png"), auto;
+      }
+      .earth {
+        cursor: url("https://i.imgur.com/scE50J2.png"), pointer;
+      }
+      .smile {
+        cursor: url("https://i.imgur.com/aPPijZC.png"), pointer;
+      }
+      button {
+        flex: 250px;
+        padding: 10px 2px;
+        white-space: nowrap;
+        border: 1px solid #dbdbdb;
+        border-radius: 8px;
+        margin: 0 20px 10px 0px;
+        background: #ff6da3;
+        color: white;
+      }
+      button:hover {
+        background: #fd337e;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Cursors of CSS</h1>
+
+    <div class="cursors">
+      <button class="auto">auto</button>
+      <button class="default">default</button>
+      <button class="none">none</button>
+      <button class="context-menu">context-menu</button>
+      <button class="grab">grab</button>
+      <button class="grabbing">grabbing</button>
+      <button class="help">help</button>
+      <button class="pointer">pointer</button>
+      <button class="progress">progress</button>
+      <button class="wait">wait</button>
+      <button class="cell">cell</button>
+      <button class="crosshair">crosshair</button>
+      <button class="text">text</button>
+      <button class="vertical-text">vertical-text</button>
+      <button class="alias">alias</button>
+      <button class="copy">copy</button>
+      <button class="move">move</button>
+      <button class="no-drop">no-drop</button>
+      <button class="not-allowed">not-allowed</button>
+      <button class="all-scroll">all-scroll</button>
+      <button class="col-resize">col-resize</button>
+      <button class="row-resize">row-resize</button>
+      <button class="n-resize">n-resize</button>
+      <button class="s-resize">s-resize</button>
+      <button class="e-resize">e-resize</button>
+      <button class="w-resize">w-resize</button>
+      <button class="ns-resize">ns-resize</button>
+      <button class="ew-resize">ew-resize</button>
+      <button class="ne-resize">ne-resize</button>
+      <button class="nw-resize">nw-resize</button>
+      <button class="se-resize">se-resize</button>
+      <button class="sw-resize">sw-resize</button>
+      <button class="nesw-resize">nesw-resize</button>
+      <button class="nwse-resize">nwse-resize</button>
+      <button class="zoom-in">zoom-in</button>
+      <button class="zoom-out">zoom-out</button>
+    </div>
+    <h1>Custom Cursor</h1>
+    <div class="cursors">
+      <button class="heart">Heart</button>
+      <button class="earth">Earth</button>
+      <button class="smile">Smile</button>
+    </div>
+  </body>
+</html>
