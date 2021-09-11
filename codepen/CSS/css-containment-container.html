@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS Container Query</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+      }
+
+      .wrapper {
+        box-shadow: inset 2px 1px 8px #ccc;
+        padding: 18px;
+        width: 300px;
+        margin: 2rem auto;
+        border-radius: 20px;
+      }
+
+      .img-wrapper {
+        width: 200px;
+        margin: auto;
+      }
+
+      img {
+        width: 100%;
+        filter: drop-shadow(-1px -2px 2px black);
+      }
+
+      .main-wrapper {
+        contain: layout inline-size style;
+      }
+
+      .notes {
+        text-align: center;
+      }
+
+      @container (min-width: 800px) {
+        .info {
+          display: flex;
+        }
+
+        h2 {
+          margin-right: 25px;
+        }
+
+        .notes {
+          width: 75%;
+          margin: 2rem auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="wrapper">
+        <div class="img-wrapper">
+          <img src="https://i.imgur.com/Fn2T5Dn.png" />
+        </div>
+        <div class="info">
+          <h2>Mario</h2>
+          <p>
+            The Super Mario series is one of the sub-series in the Mario series
+            and is the best known and best-selling sub-series as well.
+          </p>
+        </div>
+      </div>
+      <p class="notes">
+        <b>NOTE:</b> Container Query only works in Google Chrome Canary, once
+        you enable it.
+        <a href="">CSS Container Query </a>
+      </p>
+    </div>
+  </body>
+</html>
