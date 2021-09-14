@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First and last child</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 1.2rem;
+      }
+      div {
+        padding: 2rem;
+        box-shadow: inset -1px -1px 5px #ccc;
+      }
+      p:first-child {
+        color: #ff07a7;
+      }
+      p:last-child {
+        color: #008000;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>First Element</p>
+      <p>Second Element</p>
+      <p>Third Element</p>
+      <p>Fourth Element</p>
+      <p>Last Element</p>
+    </div>
+  </body>
+</html>
