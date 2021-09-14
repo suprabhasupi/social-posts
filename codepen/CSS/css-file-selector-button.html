@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>File Selector Button</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      input[type="file"]::file-selector-button {
+        /* Add styles here */
+        font-family: "Baloo 2", cursive;
+        border: 4px solid #da0f9b;
+        padding: 0.3rem 0.7rem;
+        margin: 0.3rem 0.7rem;
+        border-radius: 0.2em;
+        background-color: #ff5bcc;
+        transition: 1s;
+        color: white;
+        cursor: pointer;
+      }
+
+      input[type="file"]::file-selector-button:hover {
+        background-color: #293dd6;
+        border: 4px solid #112092;
+      }
+
+      input[type="file"] {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.5rem;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="fileUpload">Upload file</label>
+      <input type="file" id="fileUpload" />
+    </form>
+  </body>
+</html>
