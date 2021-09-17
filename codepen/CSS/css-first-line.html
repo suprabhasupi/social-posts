@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS First Line</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        width: 50%;
+        margin: auto;
+        font-size: 1.5rem;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      p::first-line {
+        color: #cd00ff;
+        word-spacing: 5px;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      The ::first-line CSS pseudo-element applies styles to the first line of a
+      block-level element. Note that the length of the first line depends on
+      many factors, including the width of the element, the width of the
+      document, and the font size of the text.
+    </p>
+    <p>
+      Styles will only be applied to the first line of this paragraph. After
+      that, all text will be styled like normal.
+    </p>
+  </body>
+</html>
