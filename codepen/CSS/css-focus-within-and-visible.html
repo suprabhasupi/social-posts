@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS Focus withing and visible</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        padding: 4rem;
+        box-shadow: inset -2px 2px 12px #b3b3b3;
+        border-radius: 5px;
+      }
+
+      form > div {
+        margin-bottom: 2rem;
+      }
+
+      form > div > input {
+        padding: 4px 6px;
+        font-size: 16px;
+        margin-left: 1rem;
+        outline: none;
+        border: 1px solid #ccc;
+      }
+      /* focus-within state */
+      form:focus-within {
+        background: #a6ffff;
+      }
+      /* focus visible state */
+      .focus-visible:focus-visible {
+        border: 3px solid purple;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="fName">First Name</label>
+        <input type="text" placeholder="focus-within" id="fName" />
+      </div>
+      <div>
+        <label for="lName">Last Name</label>
+        <input
+          type="text"
+          class="focus-visible"
+          placeholder="focus-visible"
+          id="lName"
+        />
+      </div>
+    </form>
+  </body>
+</html>
