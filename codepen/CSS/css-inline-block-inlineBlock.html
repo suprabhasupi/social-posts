@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>Inline Block and inlineBlock</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 50%;
+        margin: auto;
+      }
+      p {
+        text-align: center;
+        line-height: 2.5;
+        word-spacing: 5px;
+      }
+      /* span {
+        padding: 5px;
+        border: 5px dashed #ff527b;
+        width: 200px;
+      } */
+
+      /* block */
+      span {
+        display: block;
+        padding: 5px;
+        border: 5px dashed #ff527b;
+        /* width: 500px; */
+      }
+
+      /* inline-block */
+      span {
+        display: inline-block;
+        padding: 5px;
+        border: 5px dashed #ff527b;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        Lets checkout how inline, block and inline-block works. You can or can't
+        set the <span>width</span> or <span>height</span> for few display
+        properties.
+      </p>
+    </div>
+  </body>
+</html>
