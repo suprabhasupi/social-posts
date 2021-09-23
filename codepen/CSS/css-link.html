@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS Link</title>
+    <!-- LVHA -->
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        color: black;
+      }
+
+      /* visited state */
+      a:visited {
+        background-color: yellow;
+        border-color: hotpink;
+      }
+      /* hover state */
+      a:hover {
+        background-color: cyan;
+      }
+
+      /* focus state */
+      a:focus {
+        background-color: green;
+      }
+
+      a:active {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="#target">Target Element</a>
+      <p id="target">Understand Hover, Focus, Active, Visited.</p>
+    </div>
+  </body>
+</html>
