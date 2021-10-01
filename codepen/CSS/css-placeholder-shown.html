@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS placeholder</title>
+  </head>
+  <style>
+    body {
+      font-family: "Baloo 2", cursive;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    input {
+      border: 1px solid #eee;
+      padding: 8px 12px;
+      font-size: 1.2rem;
+      width: 25%;
+    }
+    /* input:placeholder-shown {
+      font-family: "Baloo 2", cursive;
+      background: pink;
+      color: blue;
+    } */
+
+    input:not(:placeholder-shown) {
+      background-color: yellow;
+    }
+    input:not(::placeholder) {
+      color: red;
+    }
+
+    /* input::placeholder {
+      font-style: bold;
+    } */
+  </style>
+  <body>
+    <input type="text" placeholder=" " value="Check with empty!" />
+    <!-- <input placeholder="placeholder" value="not empty" /> -->
+  </body>
+</html>
