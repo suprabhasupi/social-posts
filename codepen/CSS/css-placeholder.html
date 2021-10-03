@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS Placeholder</title>
+  </head>
+  <style>
+    body {
+      font-family: "Baloo 2", cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    div {
+      position: relative;
+    }
+    input {
+      width: 300px;
+      padding: 10px;
+      font-size: 1.2rem;
+    }
+    label {
+      display: none;
+      position: absolute;
+      top: -10px;
+      background: white;
+      left: 15px;
+      font-size: 14px;
+      padding: 0 4px;
+      transition: 1s;
+    }
+
+    input:not(:placeholder-shown) + label {
+      display: block;
+      transition: 1s;
+      color: tomato;
+    }
+  </style>
+  <body>
+    <div>
+      <input type="text" name="name" placeholder="enter name..." />
+      <label for="name">Enter your name</label>
+    </div>
+  </body>
+</html>
