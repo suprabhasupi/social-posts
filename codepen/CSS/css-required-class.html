@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS Required</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      input:required {
+        border: 2px dashed red;
+        color: blue;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        padding: 2rem 1rem;
+        box-shadow: inset 0px 0px 5px #ccc;
+      }
+      input {
+        margin-block: 10px;
+        padding: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" placeholder="Enter First Name" required />
+
+      <input type="text" placeholder="Enter Last Name" />
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>
