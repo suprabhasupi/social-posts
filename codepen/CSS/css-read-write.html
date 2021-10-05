@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS Read Write</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 2rem;
+      }
+      p:read-only {
+        color: blue;
+      }
+      p:read-write {
+        color: green;
+        border: 2px solid #1e9c24;
+        border-radius: 8px;
+        padding: 0 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p contenteditable>I am Editable</p>
+      <p>I am not Editable!</p>
+    </div>
+  </body>
+</html>
