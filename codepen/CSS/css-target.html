@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS target pseudo class</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 75%;
+        margin-inline: auto;
+      }
+      p {
+        padding: 10px;
+      }
+      :target {
+        background-color: #2bceff;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="#target">Target</a>
+    </div>
+
+    <div>
+      <p id="target">
+        The :target pseudo-class can be used to highlight the portion of a page
+        that has been linked to from a table of contents.
+      </p>
+      <p>
+        The :target CSS pseudo-class represents a unique element (the target
+        element) with an id matching the URL's fragment.
+      </p>
+    </div>
+  </body>
+</html>
