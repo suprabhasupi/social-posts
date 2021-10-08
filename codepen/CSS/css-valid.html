@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS valid</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 75%;
+        margin-inline: auto;
+      }
+
+      input {
+        padding: 10px 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        margin-left: 1rem;
+        outline: none;
+      }
+
+      input + span {
+        position: relative;
+      }
+
+      input + span::before {
+        position: absolute;
+        right: -2.2rem;
+        top: 5px;
+        font-size: 24px;
+      }
+
+      input:invalid {
+        border: 2px solid red;
+      }
+
+      input:valid {
+        border: 2px solid green;
+      }
+
+      input:invalid + span::before {
+        content: "❌";
+      }
+
+      input:valid + span::before {
+        content: "✅";
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="email">Email <span>*</span>: </label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Enter email"
+        required
+      />
+      <span></span>
+    </div>
+  </body>
+</html>
