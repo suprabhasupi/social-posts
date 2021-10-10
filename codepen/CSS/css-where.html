@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS Where</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+      .is-styling,
+      .where-styling {
+        text-align: center;
+      }
+      :is(.is-styling, .is-styling article) a {
+        color: skyblue;
+      }
+
+      :where(.where-styling, .where-styling article) a {
+        color: #ff00d2;
+      }
+
+      article a {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>:is()-styled links</h2>
+    <section class="is-styling">
+      <p>
+        Here is my main content. This
+        <a href="#">contains a link</a>.
+      </p>
+      <article>Checkout the article section <a href="#">A link</a></article>
+    </section>
+
+    <h2>:where()-styled links</h2>
+    <section class="where-styling">
+      <p>
+        Here is my aside content. This
+        <a href="#">also contains a link</a>.
+      </p>
+      <article>Checkout the article section <a href="#">A link</a></article>
+    </section>
+  </body>
+</html>
