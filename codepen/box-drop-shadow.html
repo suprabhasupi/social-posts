@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>Box and Drop shadow</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 75%;
+        margin: auto;
+      }
+      div {
+        width: 300px;
+        border: 1px solid #f1f1f1;
+        padding: 26px;
+        text-align: center;
+      }
+      p {
+        font-size: 20px;
+      }
+      img {
+        width: 100%;
+      }
+      .drop-shadow {
+        filter: drop-shadow(3px 5px 4px black);
+      }
+      .box-shadow {
+        box-shadow: 3px 2px 1px #ccc, -3px -3px 0px #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        class="drop-shadow"
+        src="https://cdn02.nintendo-europe.com/media/images/08_content_images/games_6/nintendo_switch_7/nswitch_supermario3dallstars/CI_NSwitch_SuperMario3DAllStars_Mario_Galaxy.png"
+      />
+      <p>Drop Shadow</p>
+    </div>
+
+    <div>
+      <img
+        class="box-shadow"
+        src="https://cdn02.nintendo-europe.com/media/images/08_content_images/games_6/nintendo_switch_7/nswitch_supermario3dallstars/CI_NSwitch_SuperMario3DAllStars_Mario_Galaxy.png"
+      />
+      <p>Box Shadow</p>
+    </div>
+  </body>
+</html>
