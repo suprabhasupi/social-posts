@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title>CheckBox</title>
+    <style>
+      body {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+        margin-right: 2rem;
+      }
+
+      input[type="checkbox"] + label:before {
+        content: "🍄";
+        border: 0.1em solid #000;
+        border-radius: 0.2em;
+        display: inline-block;
+        width: 1.3em;
+        height: 1em;
+        padding-left: 0.2em;
+        padding-bottom: 0.3em;
+        margin-right: 0.5em;
+        vertical-align: bottom;
+        color: transparent;
+        transition: 0.2s;
+      }
+
+      input[type="checkbox"] + label:active:before {
+        transform: scale(0);
+      }
+
+      input[type="checkbox"]:checked + label:before {
+        background-color: #0bca0b;
+        border-color: green;
+        color: #fff;
+      }
+
+      input[type="checkbox"]:disabled + label:before {
+        transform: scale(1);
+        border-color: #aaa;
+      }
+
+      input[type="checkbox"]:checked:disabled + label:before {
+        transform: scale(1);
+        background-color: #e7fbe7;
+        border-color: #e7fbe7;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 2rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Checkbox</h1>
+    <form>
+      <input type="checkbox" id="active" name="active" value="Active" />
+      <label for="active">Active</label>
+
+      <input
+        type="checkbox"
+        id="disabled"
+        name="disabled"
+        value="Disabled"
+        checked
+        disabled
+      />
+      <label for="disabled">Disabled</label>
+    </form>
+  </body>
+</html>
