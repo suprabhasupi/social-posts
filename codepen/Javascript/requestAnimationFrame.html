@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RequestAnimationFrame</title>
+    <style>
+      body {
+        width: 75%;
+        margin: 5rem auto;
+      }
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .button-wrapper {
+        display: flex;
+        justify-content: center;
+        padding-block: 15px;
+      }
+      button {
+        cursor: pointer;
+        margin-right: 20px;
+        font-size: 1rem;
+        padding: 6px 20px;
+        border: none;
+        border-radius: 4px;
+      }
+      button:nth-child(n) {
+        box-shadow: inset 1px 1px 4px #3d7b3d;
+        background-color: #6fe96f;
+      }
+      button:nth-child(2n) {
+        box-shadow: inset 1px 1px 4px #df3030;
+        background-color: #ffa2a2;
+      }
+      .frame {
+        width: 15px;
+        height: 15px;
+        margin: 10px;
+        border-radius: 50%;
+        transition: 1s;
+      }
+      .frame:nth-child(n) {
+        background-color: #ff00b1;
+      }
+      .frame:nth-child(2n) {
+        background-color: #10bd10;
+      }
+      .frame:nth-child(3n) {
+        background-color: #1095bd;
+      }
+      .frame:nth-child(4n) {
+        background-color: #ffc645;
+      }
+      .frame:nth-child(5n) {
+        background-color: #a645ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-wrapper">
+      <button onclick="onStart()">Start</button>
+      <button onclick="onStop()">Stop</button>
+    </div>
+    <div id="container">
+      <div class="frame"></div>
+    </div>
+  </body>
+
+  <script>
+    let frameID
+    const getDiv = document.getElementsByClassName("frame")
+    console.log(
+      "🚀 ~ file: requestAnimationFrame.html ~ line 22 ~ getDiv",
+      getDiv[0]
+    )
+    const smoothAnimation = () => {
+      getDiv[0].insertAdjacentHTML("afterend", "<div class='frame'></div>")
+      frameID = requestAnimationFrame(smoothAnimation)
+    }
+
+    const onStart = () => {
+      frameID = requestAnimationFrame(smoothAnimation)
+    }
+
+    const onStop = () => {
+      cancelAnimationFrame(frameID)
+    }
+  </script>
+</html>
