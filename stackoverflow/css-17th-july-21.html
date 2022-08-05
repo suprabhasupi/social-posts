@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .holder {
+        display: flex;
+      }
+      .group1 {
+        flex: 1;
+        text-align: center;
+      } */
+
+      /* using grid */
+      .holder {
+        display: grid;
+        grid-template-columns: 1fr 0fr;
+      }
+      .group1 {
+        flex: 1;
+        text-align: center;
+        border: 1px solid green;
+      }
+      .group2 {
+        border: 1px solid pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="holder">
+      <div class="group1">...</div>
+      <div class="group2">.....</div>
+    </div>
+  </body>
+</html>
+
+<!-- https://stackoverflow.com/questions/34289021/align-center-and-right-with-flex/68418450#68418450 -->
